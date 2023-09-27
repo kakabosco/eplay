@@ -7,7 +7,7 @@ export const HeaderBar = styled.header`
   justify-content: space-between;
   padding: 24px;
   border-radius: 16px;
-  background-color: ${colors.grey};
+  background-color: ${colors.gray};
   margin-bottom: 80px;
 
   a {
