@@ -4,7 +4,6 @@ import { Items, Item, Action, Modal, ModalContent } from './styles'
 import hogwarts from '../../assets/images/hogwarts_gallery.png'
 import zoom from '../../assets/images/zoom.png'
 import play from '../../assets/images/play.png'
-import hogwartsModal from '../../assets/images/hogwarts_popup.png'
 import close from '../../assets/images/fechar.png'
 
 interface GalleryItem {
