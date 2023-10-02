@@ -40,15 +40,17 @@ const ProductsList = ({ background, title, games }: Props) => {
         <Title>{title}</Title>
         <List>
           {games.map((game) => (
-            <Product
-              key={game.id}
-              infos={getGameTags(game)}
-              image={game.media.thumbnail}
-              title={game.name}
-              description={game.description}
-              category={game.details.category}
-              system={game.details.system}
-            />
+            <li key={game.id}>
+              <Product
+                id={game.id}
+                infos={getGameTags(game)}
+                image={game.media.thumbnail}
+                title={game.name}
+                description={game.description}
+                category={game.details.category}
+                system={game.details.system}
+              />
+            </li>
           ))}
         </List>
       </div>
