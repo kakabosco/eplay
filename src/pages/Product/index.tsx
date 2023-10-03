@@ -1,20 +1,23 @@
 import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import { Game } from '../Home'
+// import { useEffect, useState } from 'react'
+// import { Game } from '../Home'
 import Hero from '../../components/Hero'
 import Section from '../../components/Section'
 import Gallery from '../../components/Gallery'
+import { useGetGameQuery } from '../../services/api'
 
 const Product = () => {
   const { id } = useParams()
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  const { data: game } = useGetGameQuery(id!)
 
-  const [game, setGame] = useState<Game>()
+  // const [game, setGame] = useState<Game>()
 
-  useEffect(() => {
-    fetch(`https://fake-api-tau.vercel.app/api/eplay/jogos/${id}`)
-      .then((res) => res.json())
-      .then((res) => setGame(res))
-  }, [id])
+  // useEffect(() => {
+  //   fetch(`https://fake-api-tau.vercel.app/api/eplay/jogos/${id}`)
+  //     .then((res) => res.json())
+  //     .then((res) => setGame(res))
+  // }, [id])
 
   if (!game) {
     return <h3>Carregando...</h3>
