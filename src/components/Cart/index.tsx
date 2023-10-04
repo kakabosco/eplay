@@ -53,7 +53,7 @@ const Cart = () => {
             </CartItem>
           ))}
         </ul>
-        <Quantity>{items.length} jogos no carrinho</Quantity>
+        <Quantity>{items.length} jogo(s) no carrinho</Quantity>
         <Prices>
           Total de {priceFormatter(getTotalPrice())}{' '}
           <span>Em até 6x s/juros</span>
