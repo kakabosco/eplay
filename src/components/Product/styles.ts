@@ -5,6 +5,7 @@ import { TagContainer } from '../Tag/styles'
 
 export const Card = styled(Link)`
   position: relative;
+  height: 100%;
   padding: 8px;
   border-radius: 8px;
   background-color: ${colors.gray};

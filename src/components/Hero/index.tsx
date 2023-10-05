@@ -1,10 +1,13 @@
 import { useDispatch } from 'react-redux'
-import { Banner, Infos } from './styles'
+
 import Tag from '../Tag'
 import Button from '../Button'
+
 import { Game } from '../../pages/Home'
-import { priceFormatter } from '../ProductsList'
+import { priceFormatter } from '../../utils'
 import { add, open } from '../../store/reducers/cart'
+
+import * as S from './styles'
 
 type Props = {
   game: Game
@@ -19,14 +22,14 @@ const Hero = ({ game }: Props) => {
   }
 
   return (
-    <Banner style={{ backgroundImage: `url(${game.media.cover})` }}>
+    <S.Banner style={{ backgroundImage: `url(${game.media.cover})` }}>
       <div className="container">
         <div>
           <Tag>{game.details.category}</Tag>
           <Tag>{game.details.system}</Tag>
         </div>
 
-        <Infos>
+        <S.Infos>
           <h2>{game.name}</h2>
           <p>
             {game.prices.discount && (
@@ -46,9 +49,9 @@ const Hero = ({ game }: Props) => {
               Adicionar ao carrinho
             </Button>
           )}
-        </Infos>
+        </S.Infos>
       </div>
-    </Banner>
+    </S.Banner>
   )
 }
 

@@ -19,11 +19,11 @@ export const Action = styled.div`
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s;
-  cursor: pointer;
 `
 
 export const Item = styled.li`
   position: relative;
+  cursor: pointer;
 
   > img {
     height: 150px;
