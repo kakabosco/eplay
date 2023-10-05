@@ -3,10 +3,11 @@ import { HashLink as Link } from 'react-router-hash-link'
 import { colors } from '../../styles'
 
 export const Container = styled.footer`
-  background-color: ${colors.gray};
   padding: 32px 0;
+  margin-top: 40px;
   font-size: 14px;
   text-align: center;
+  background-color: ${colors.gray};
 `
 
 export const SectionTitle = styled.h4`
