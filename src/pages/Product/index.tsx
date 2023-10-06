@@ -5,14 +5,14 @@ import Section from '../../components/Section'
 import Gallery from '../../components/Gallery'
 
 import { useGetGameQuery } from '../../services/api'
+import Loader from '../../components/Loader'
 
 const Product = () => {
-  const { id } = useParams()
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  const { data: game } = useGetGameQuery(id!)
+  const { id } = useParams() as { id: string }
+  const { data: game } = useGetGameQuery(id)
 
   if (!game) {
-    return <h3>Carregando...</h3>
+    return <Loader />
   }
 
   return (
